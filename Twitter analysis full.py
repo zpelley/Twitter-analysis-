@@ -59,6 +59,9 @@ textfield_pass.send_keys(bot_password)
 submit_button  = driver.find_element_by_xpath('//*[@id="page-container"]/div/div[1]/form/div[2]/button')
 submit_button.click()
 
+##I had an issue trying to use the find_element_by_id with Twitter, so I used the xpath model to ensure it worked. 
+##password issue: switched to class_name error:NoSuchElementException: Message: Unable to locate element: [id="session[password]"]
+##The program would run but not enter the password. I found a way to circumvent this issue by adding a delay (1 sec) in entering the username then password![image.png](attachment:image.png)
 
 # In[4]:
 
