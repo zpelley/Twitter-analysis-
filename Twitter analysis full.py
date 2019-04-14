@@ -26,7 +26,7 @@ import matplotlib.pyplot as plt
 
 
 ## Define which browser to use & open login page
-driver = webdriver.Firefox(executable_path=r"C:\Users\zcp17\Downloads\geckodriver-v0.24.0-win64 (1)\geckodriver.exe")
+driver = webdriver.Firefox(executable_path=r"C:\Users\Downloads\geckodriver-v0.24.0-win64 (1)\geckodriver.exe")
 driver.get('https://twitter.com/login')
 driver.implicitly_wait(5)
 ## implicity_wait makes the bot wait 5 seconds before every action
@@ -34,8 +34,8 @@ driver.implicitly_wait(5)
     
 ## Define the user and email combo. 
 bot_name = "TwitterBot"
-bot_email = "zpelley@gmail.com"
-bot_password = "redarmy9"
+bot_email = "insertemail@gmail"
+bot_password = "password"
 print(bot_name + " is getting started")
 
 
@@ -72,7 +72,7 @@ followers_button.click()
 # In[5]:
 
 
-df = pd.read_csv(r'C:\Users\zcp17\Desktop\Python\twitter_data.csv', encoding = "ISO-8859-1")
+df = pd.read_csv(r'C:\Desktop\Python\twitter_data.csv', encoding = "ISO-8859-1")
 arr = df.usernames
 
 
@@ -157,5 +157,5 @@ for i in range(0,len(arr)):
         'stats_following': [stats_following],
         'stats_favorites': [stats_favorites],
     })])
-    main.to_csv(r'C:\Users\zcp17\Desktop\Python\twitter_data_full.csv')
+    main.to_csv(r'C:\Python\twitter_data_full.csv')
 
